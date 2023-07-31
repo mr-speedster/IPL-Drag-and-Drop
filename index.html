@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://pixlok.com/wp-content/uploads/2021/04/IPL-Logo-PNG.jpg">
+    <title>IPL Team</title>
+    <style>
+        h1,h2,h3,h4,h5,h6{
+            color: rgb(7, 98, 235);
+        }
+        #div1{
+            width: 250px;
+            height:250px;
+            padding:10px;
+            margin:10px;
+            border: 2px solid red;
+            float: left;
+        }
+        #div2{
+            width: 250px;
+            height:250px;
+            padding:10px;
+            margin:10px;
+            border: 2px solid rgb(255, 247, 0);
+            float: left;
+        }
+        #div3{
+            width: 250px;
+            height:250px;
+            padding:10px;
+            margin:10px;
+            border: 2px solid rgb(0, 98, 255);
+            float: left;
+        }
+        #div4{
+            width: 250px;
+            height:250px;
+            padding:10px;
+            margin:10px;
+            border: 2px solid rgb(70, 38, 97);
+            float: left;
+        }
+        #div5{
+            width: auto;
+            height: auto;
+            padding:5px;
+            margin-top:320px;
+            border: 2px solid rgb(70, 38, 97);
+        }
+        #btn{
+            color: white;
+            background-color: red;
+            border: red;
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+        .team{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <center>
+                <img src="https://pixlok.com/wp-content/uploads/2021/04/IPL-Logo-PNG.jpg" width="80">
+                <h2>Let's choose your IPL Team</h2>
+            </center>
+        </div>
+    </header>
+    <section>
+        <div class="team">
+            <img src="https://iconape.com/wp-content/png_logo_vector/royal-challengers-bengaluru-logo.png" width="25" style="position: absolute;" alt="">
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+        </div>
+        <div class="team">
+            <img src="https://www.pngitem.com/pimgs/m/127-1270691_chennai-super-kings-logo-png-image-free-download.png" width="50" style="position: absolute;" alt="">
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+        </div>
+        <div class="team">
+            <img src="https://wallpaperaccess.com/full/2302511.jpg" width="50" style="position: absolute;" alt="">
+            <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+        </div>
+        <div class="team">
+            <img src="https://logowik.com/content/uploads/images/kolkata-knight-riders6292.jpg" width="50" style="position: absolute;" alt="">
+            <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+        </div>
+    </section>
+    <section>
+        <center>
+            <div id="div5">
+                <h4>All Players</h4>
+                <br><br>
+                <img id="img1" style="border-radius: 50%;" draggable="true" ondragstart="drag(event)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_39aGxmQApjrmhdOYhgZ_fLq7nTGrOqc_XzPY1kPYtNFulnI56RDVzhU6DKUCzxmgPU&usqp=CAU" width="100" alt="">
+                <img id="img2" style="border-radius: 50%;" draggable="true" ondragstart="drag(event)" src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png" width="100" alt="">
+                <img id="img3" style="border-radius: 50%;" draggable="true" ondragstart="drag(event)" src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/6.png" width="100" alt="">
+                <img id="img4" style="border-radius: 50%;" draggable="true" ondragstart="drag(event)" src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/playerheadshot/ipl/284/233.png" width="100" alt="">
+                <img id="img5" style="border-radius: 50%;" draggable="true" ondragstart="drag(event)" src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/141.png" width="100" alt="">
+                <img id="img6" style="border-radius: 50%;" draggable="true" ondragstart="drag(event)" src="https://parimatchnews.com/wp-content/uploads/2020/11/Kieron-Pollard.png" width="100" alt="">
+                <img id="img7" style="border-radius: 50%;" draggable="true" ondragstart="drag(event)" src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/46.png" width="100" alt="">
+                <img id="img8" style="border-radius: 50%;" draggable="true" ondragstart="drag(event)" src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/12.png" width="100" alt="">
+            </div>
+        </center>
+    </section>
+    <section>
+        <div>
+            <center>
+                <button id="btn" onclick="window.location.reload()">Clear All</button>
+            </center>
+        </div>
+    </section>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault()
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData('key',event.target.id)
+        }
+
+        function drop(event) {
+            var id = event.dataTransfer.getData('key')
+            event.target.appendChild(document.getElementById(id))
+        }
+    </script>
+</body>
+</html
